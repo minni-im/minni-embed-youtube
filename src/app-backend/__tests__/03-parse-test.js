@@ -23,12 +23,16 @@ test("Embed should parse embed url", () => {
   expect(tree[0].id).toBe("vsF0K3Ou1v0");
 });
 
-test.skip(
-  "Embed should parse url containing query params other than video id",
-  () => {
-    const tree = parse("https://youtu.be/XUvhAPs38RA?t=12334");
-    expect(tree.length).toBe(1);
-    expect(tree[0].type).toBe("youtube");
-    expect(tree[0].id).toBe("XUvhAPs38RA");
-  }
-);
+test("Embed should parse url containing query params on short url", () => {
+  const tree = parse("https://youtu.be/XUvhAPs38RA?t=37s");
+  expect(tree.length).toBe(1);
+  expect(tree[0].type).toBe("youtube");
+  expect(tree[0].id).toBe("XUvhAPs38RA");
+});
+
+test("Embed should parse url containing query params on standard url", () => {
+  const tree = parse("https://www.youtube.com/watch?v=4SbiiyRSIwo&t=1m32");
+  expect(tree.length).toBe(1);
+  expect(tree[0].type).toBe("youtube");
+  expect(tree[0].id).toBe("4SbiiyRSIwo");
+});

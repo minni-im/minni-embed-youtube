@@ -1,5 +1,5 @@
 const mappings = {
-  "http://www.youtube.com/oembed?url=https://youtube.com/watch?v=4SbiiyRSIwo&format=json":
+  "http://www.youtube.com/oembed?url=https://youtube.com/watch?v=4SbiiyRSIwo":
     "youtube",
 };
 

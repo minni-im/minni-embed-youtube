@@ -6,32 +6,38 @@
   "browser": "src/app-frontend/",
   "scripts": {
     "test": "jest",
-    "build":
-      "rimraf lib && babel src/app-backend -d lib --ignore test.js,__mocks__,__tests__"
+    "build": "rimraf lib && babel src/app-backend -d lib --ignore test.js,__mocks__,__tests__"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/minni-im/minni-embed-youtube.git"
   },
-  "keywords": ["embed", "youtube", "minni", "chat", "video"],
+  "keywords": [
+    "embed",
+    "youtube",
+    "minni",
+    "chat",
+    "video"
+  ],
   "author": "Benoit Charbonnier <benoit.charbonnier@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/minni-im/minni-embed-youtube/issues"
   },
   "homepage": "https://github.com/minni-im/minni-embed-youtube#readme",
-  "dependencies": {
-    "node-fetch": "1.7.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-eslint": "8.0.0",
     "babel-jest": "21.0.2",
     "babel-preset-node8": "1.2.0",
     "eslint": "4.7.1",
-    "jest": "21.1.0"
+    "jest": "21.1.0",
+    "rimraf": "^2.6.2"
   },
   "peerDependencies": {
-    "node-fetch": "1.7.*"
+    "node-fetch": "1.7.*",
+    "react": "15.*",
+    "react-dom": "15.*"
   }
 }
