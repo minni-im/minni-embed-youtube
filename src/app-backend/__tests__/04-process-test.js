@@ -1,6 +1,7 @@
-import YoutubeEmbed from "../";
-
 import { process } from "@minni-im/minni-embed";
+
+import { init } from "../";
+init();
 
 test("Embed should not generate data for invalid url", () => {
   return process("foo bar").then(embed => {

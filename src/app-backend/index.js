@@ -4,9 +4,12 @@ const REGEXP_YOUTUBE = /^https?:\/\/(?:[^\.]+\.)?youtube\.com\/watch\/?\?(?:.+&)
 const REGEXP_YOUTUBE_EMBED = /^https?:\/\/(?:[^\.]+\.)?youtube\.com\/(?:embed|v)\/([^\s]+[\S])/;
 const REGEXP_YOUTU_BE = /^https?:\/\/youtu\.be\/(\w+)[\S]?/;
 
+export const name = "Youtube";
+export const type = "video.youtube";
+
 export default class YoutubeEmbed extends OEmbed {
-  name = "Youtube";
-  type = "video.youtube";
+  name = name;
+  type = type;
 
   match(source) {
     return (
@@ -29,4 +32,6 @@ export default class YoutubeEmbed extends OEmbed {
   }
 }
 
-register(new YoutubeEmbed());
+export function init(conf) {
+  register(new YoutubeEmbed());
+}

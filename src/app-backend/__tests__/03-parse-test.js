@@ -1,6 +1,7 @@
-import YoutubeEmbed from "../";
-
 import { parse } from "@minni-im/minni-embed";
+
+import { init } from "../";
+init();
 
 test("Embed should parse standard url", () => {
   const tree = parse("https://www.youtube.com/watch?v=4SbiiyRSIwo");
