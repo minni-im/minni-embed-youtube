@@ -16,7 +16,7 @@ test("Embed should have a valid name and type", () => {
 
 test("Embed should implement needed methods", () => {
   const embed = new YoutubeEmbed();
-  expect(embed).toHaveEndPointUrlMethod();
+  expect(embed).toHaveEndpointUrlMethod();
   expect(embed).toHaveMatchMethod();
   expect(embed).toHaveProcessMethod();
 });

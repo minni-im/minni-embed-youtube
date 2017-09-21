@@ -26,7 +26,7 @@ export default class YoutubeEmbed extends OEmbed {
     };
   }
 
-  endPointUrl({ id: videoId }) {
+  endpointUrl({ id: videoId }) {
     const videoUrl = encodeURI(`https://youtube.com/watch?v=${videoId}`);
     return `http://www.youtube.com/oembed?url=${videoUrl}`;
   }
