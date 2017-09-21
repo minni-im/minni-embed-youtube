@@ -6,21 +6,16 @@
   "browser": "src/app-frontend/",
   "scripts": {
     "test": "jest",
-    "build": "rimraf lib && babel src/app-backend -d lib --ignore test.js,__mocks__,__tests__"
+    "build":
+      "rimraf lib && babel src/app-backend -d lib --ignore test.js,__mocks__,__tests__"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/minni-im/minni-embed-youtube.git"
   },
-  "keywords": [
-    "embed",
-    "youtube",
-    "minni",
-    "chat",
-    "video"
-  ],
+  "keywords": ["embed", "youtube", "minni", "chat", "video"],
   "author": "Benoit Charbonnier <benoit.charbonnier@gmail.com>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/minni-im/minni-embed-youtube/issues"
   },
@@ -36,6 +31,7 @@
     "rimraf": "^2.6.2"
   },
   "peerDependencies": {
+    "@minni-im/minni-embed": "1.0.3",
     "node-fetch": "1.7.*",
     "react": "15.*",
     "react-dom": "15.*"
