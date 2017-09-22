@@ -1,11 +1,12 @@
 const mappings = {
-  "http://www.youtube.com/oembed?url=https://youtube.com/watch?v=4SbiiyRSIwo":
+  "http://www.youtube.com/oembed?url=https://youtube.com/watch?v=4SbiiyRSIwo&format=json":
     "youtube",
 };
 
 function fake(url, options = {}) {
   if (!(url in mappings)) {
     return Promise.resolve({
+      ok: true,
       status: 404,
     });
   }

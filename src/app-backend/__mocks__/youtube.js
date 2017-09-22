@@ -1,4 +1,5 @@
 export default {
+  ok: true,
   status: 200,
   json() {
     return Promise.resolve({
