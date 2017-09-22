@@ -1,6 +1,6 @@
 {
   "name": "@minni-im/minni-embed-youtube",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Youtube embed provider for minni-app chat",
   "main": "lib/",
   "browser": "src/app-frontend/",
